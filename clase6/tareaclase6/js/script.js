@@ -54,3 +54,21 @@ do{
 } while (num <= 100);
 console.log(num);
 */
+
+
+        // Ejercicios For
+
+    // 1
+/*
+for (let num = 1; num <= 10; num++){
+    console.log(num);
+}
+*/
+
+    // 2
+
+let resultado = 1;
+for (let num = 1; num <= 10; num++) {
+    resultado = resultado * num;
+    console.log(resultado);
+}
