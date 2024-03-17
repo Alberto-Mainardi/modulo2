@@ -47,3 +47,124 @@ function calcularArea(figuras) {
 calcularArea(figuras);
 */
 
+
+    // Declaramos la función declarada
+function calculadora(ope, num, num2) {
+    // console.log(typeof ope, typeof num, typeof num2);
+    // switch (ope) {
+    //     case "+":
+    //         return num + num2;
+    //     case "-":
+    //         return num - num2;
+    //     case "*":
+    //          return num * num2;
+    //     case "/":
+    //         return num / num2;
+    //     default:
+    //         return "No es una operación válida";
+    // }
+
+    if(ope == '+'){
+        return num + num2;
+    } else if(ope == '-'){
+        return num - num2;
+    } else if(ope == '*'){
+        return num * num2;
+    } else if(ope == '/'){
+        return num - num2;
+    } else {
+        return "No es una operación válida";
+    }
+}
+    // Invocar o llamar a la función
+// let resultado = calculadora("+", 14, 25);
+// console.log(resultado);
+
+// console.log(calculadora('-', 3, 15));
+// console.log(calculadora('+', 33, 5));
+// console.log(calculadora('*', 2, 21));
+// console.log(calculadora('/', 30, 2));
+
+// Metodos de los arrays
+let numeros = [14, 25, 36, 89, 41, 2, 3, 54, 76, 233];
+
+function buscarEnArray(arr, valor) {
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] == valor) {
+    //         return true;
+    //     }
+        
+    // }
+    // return false;
+    return arr.includes(valor);
+}
+console.log(buscarEnArray(numeros, 14));
+
+let nombres = ["Luis", "Ángel", "Cecilia", "Gonzalo", "Alberto"];
+
+console.log(buscarEnArray(nombres, "Alberto"));
+
+let alumno = {
+    nombre: "Juan",
+    edad: 21,
+    apellido: "López",
+    direccion: "Av. Aconquija 2300"
+}
+
+function contarPropiedades(obj) {
+    return Object.keys(obj).length;    
+}
+
+console.log(contarPropiedades(alumno));
+
+function concatenarArrays(arr, arr2) {
+    return arr.concat(arr2);
+    // return arr.push(arr2);
+}
+console.log(concatenarArrays(numeros, nombres));
+
+
+// Obtener la posición de algún valor
+
+console.log(nombres.indexOf("Cecilia"));
+
+
+// Eliminar un registro de un array
+console.log(nombres);
+
+function eliminarRegistroArray(arr, valor) {
+    // Está?
+    let esta = arr.includes(valor);
+    if (esta) {
+        let pos = arr.indexOf(valor);
+        arr.splice(pos, 1);
+        return arr;
+    }
+}
+
+console.log(eliminarRegistroArray(nombres, "Luis"));
+console.log(nombres.sort());
+console.log(nombres.reverse());
+
+const cafeteria = [
+    { nombre: "Café americano", categoria: "Bebida", cantidad: 20 },
+    { nombre: "Croissant", categoria: "Alimento", cantidad: 15 },
+    { nombre: "Tarta de manzana", categoria: "Postre", cantidad: 8 },
+    { nombre: "Té verde", categoria: "Bebida", cantidad: 25 },
+    { nombre: "Sandwich de pollo", categoria: "Alimento", cantidad: 10 },
+    { nombre: "Brownie", categoria: "Postre", cantidad: 12 }
+];
+
+function esBrownie(postre) {
+    return postre.nombre === "Brownie";
+}
+
+console.log(cafeteria.find(esBrownie));
+
+let string = "Soy,un,string";
+console.log("La longitud del texto es de " + string.length + " caracteres.");
+console.log(string.indexOf("n"));
+console.log(string.search("string"));
+console.log(string.split(","));
+console.log(string.toUpperCase().split(","));
+console.log(string.toLocaleLowerCase().split(","));
