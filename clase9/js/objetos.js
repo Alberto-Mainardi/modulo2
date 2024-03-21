@@ -91,7 +91,7 @@ for (let i = 0; i < carro.length; i++) {
     console.log(carro[i]);
 }
 */
-
+/*
 let curso = {
     nombre: "React",
     dias: ["Lunes", "Miercoles", "Viernes"],
@@ -133,7 +133,8 @@ let curso = {
     }
 }
 // console.log(curso.enviarEmail());
-
+*/
+/*
 function Alumno(nombre, apellido, edad) {
     this.nombre = nombre;
     this.apellido = apellido;
@@ -155,7 +156,7 @@ console.log(tutor);
 
 // Comparar objetos
 console.log(docente.nombre == tutor.nombre);
-
+*/
 // OBJETOS GLOBALES
 
 // Object, Array, Function, Boolean, Number
