@@ -170,6 +170,7 @@ console.log(cafe2.agregarAzucar());
 console.log(cafe2.prepararCafe());
 */
 
+/*
 class Empresa {
     #cuil;
     #nombre;
@@ -207,3 +208,103 @@ console.log(empresa.getCuil());
 console.log(empresa.setCuil(234856942));
 console.log(empresa.getCuil());
 console.log(empresa.getNombre());
+*/
+
+// Ejercicio 3
+
+class Persona {
+
+    #nombre;
+    #apellido;
+    #altura;
+    #peso;
+    #edad;
+    #genero;
+
+
+    constructor (nombre, apellido, altura, peso, edad, genero) {
+        this.#nombre = nombre;
+        this.#apellido = apellido;
+        this.#altura = altura;
+        this.#peso = peso;
+        this.#edad = edad;
+        this.#genero = genero;
+    }
+
+    describir(){
+    return this.nombreYApellido() + "," +
+    this.medirAltura() + "," + 
+    this.medirPeso() + "," +
+    this.medirEdad() + "," +
+    this.generoDePersona();
+    }
+
+    nombreYApellido(){
+        return this.#nombre + " " + this.#apellido ;
+    }
+
+    medirAltura(){
+        if (this.#altura < 150) {
+            return " es una persona baja";
+        } else if (this.#altura < 170) {
+            return " es una persona de estatura normal";
+        } else {
+            return " es una persona alta";
+        }
+    }
+
+    medirPeso(){
+        if (this.#peso < 50) {
+            return " es liviana";
+        } else if (this.#peso < 75) {
+            return " es de peso promedio";
+        } else {
+            return " es pesada";
+        }
+    }
+
+    medirEdad(){
+        if (this.#edad < 25) {
+            return " es joven";
+        } else if (this.#edad < 60) {
+            return " es de edad media";
+        } else {
+            return " es una persona mayor";
+        }
+    }
+
+    generoDePersona(){
+        return " su género es " + this.#genero;
+    }
+}
+
+class Empleado extends Persona {
+
+    #cargo;
+
+    constructor (nombre, apellido, altura, peso, edad, genero, cargo) {
+        super(nombre, apellido, altura, peso, edad, genero);
+        this.#cargo = cargo;
+    }
+
+    describir(){
+        return this.nombreYApellido() + "," +
+        this.medirAltura() + "," + 
+        this.medirPeso() + "," +
+        this.medirEdad() + "," +
+        this.generoDePersona() + "," +
+        this.cargoDePersona();
+        }
+
+    cargoDePersona(){
+        return " Su cargo es: " + this.#cargo
+    }
+}
+
+
+let persona = new Persona("Juan", "González", 175, 49, 22, "masculino",);
+
+console.log(persona.describir());
+
+let empleado = new Empleado("Alberto", "Moreno", 172, 65, 21, "masculino", "Supervisor de ventas");
+console.log(empleado.describir());
